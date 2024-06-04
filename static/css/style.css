@@ -1,0 +1,25 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #FCECDD;
+}
+
+.navbar {
+    background-color: #AD88C6;
+    /* border-bottom: 1px solid orangered; */
+    box-shadow: 0px 0px 20px 0px rgba(168, 54, 13, 0.495);
+    color: antiquewhite;
+}
+
+
+.btn {
+    background-color: #BC7FCD;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background-color: #86469C;
+}
