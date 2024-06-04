@@ -16,7 +16,6 @@ def home():
     # fuel_type = car_data["Fuel_type"].unique()
     # drive = car_data["Drive"].unique()
     all_data_list = get_all_data()
-    print(all_data_list[0])
     return render_template("index.html",
                            car_names=all_data_list[0],
                            years=all_data_list[1],
