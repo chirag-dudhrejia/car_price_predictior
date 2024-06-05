@@ -33,18 +33,17 @@ def perform_prediction():
     fuel = values["fuel_type"]
     drive = values["drive"]
     kms_driven = values["km_travelled"]
-    all_data_list = get_all_data()
 
     prediction = model.predict(pd.DataFrame(data=[[car_model, year, kms_driven, fuel, drive]],
                                             columns=["Car_name", "Year", "Distance", "Fuel_type", "Drive"]))
     prediction = round(prediction[0])
-    return render_template("index.html",
+    return render_template("prediction_page.html",
                            prediction=prediction,
-                           car_names=all_data_list[0],
-                           years=all_data_list[1],
-                           distance=all_data_list[2],
-                           fuel_type=all_data_list[3],
-                           drive=all_data_list[4])
+                           car_model=car_model,
+                           year=year,
+                           fuel=fuel,
+                           drive=drive,
+                           kms_driven=kms_driven)
 
 
 def get_all_data():
