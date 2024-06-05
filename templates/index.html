@@ -86,16 +86,10 @@
 
         <div class="mb-3 text-center">
             <label for="km_travelled" class="form-label">Enter distance traveled:</label>
-            <input type="number" class="form-control", name="km_travelled" id="km_travelled" placeholder="eg. 3000" required>
+            <input type="number" class="form-control" name="km_travelled" id="km_travelled" placeholder="eg. 3000" required>
         </div>
         <button class="btn w-100 mt-4" type="submit">Predict</button>
       </form>
-
-      <div class="text-center mt-4">
-        {% if prediction %}
-            <p class="h3">Estimated Price: ₹{{ prediction }}</p>
-        {% endif %}
-      </div>
     </div>
     
 
