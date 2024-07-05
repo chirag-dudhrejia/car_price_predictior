@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: Car_price_predictor
+Version: 0.0.1
+Author: Chirag
+Author-email: dchirag159@gmail.com
+Requires-Dist: gunicorn
+Requires-Dist: flask~=3.0.3
+Requires-Dist: pandas~=2.2.1
+Requires-Dist: scikit-learn

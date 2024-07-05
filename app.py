@@ -10,18 +10,18 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    # car_names = sorted(car_data["Car_name"].unique())
-    # years = sorted(car_data["Year"].unique())
-    # distance = sorted(car_data["Distance"].unique())
-    # fuel_type = car_data["Fuel_type"].unique()
-    # drive = car_data["Drive"].unique()
-    all_data_list = get_all_data()
+    car_names = sorted(car_data["Car_name"].unique())
+    years = sorted(car_data["Year"].unique())
+    distance = sorted(car_data["Distance"].unique())
+    fuel_type = car_data["Fuel_type"].unique()
+    drive = car_data["Drive"].unique()
+    # all_data_list = get_all_data()
     return render_template("index.html",
-                           car_names=all_data_list[0],
-                           years=all_data_list[1],
-                           distance=all_data_list[2],
-                           fuel_type=all_data_list[3],
-                           drive=all_data_list[4])
+                           car_names=car_names,
+                           years=years,
+                           distance=distance,
+                           fuel_type=fuel_type,
+                           drive=drive)
 
 
 @app.route("/performing_prediction", methods=["POST"])
@@ -46,14 +46,14 @@ def perform_prediction():
                            kms_driven=kms_driven)
 
 
-def get_all_data():
-    car_names = sorted(car_data["Car_name"].unique())
-    years = sorted(car_data["Year"].unique())
-    distance = sorted(car_data["Distance"].unique())
-    fuel_type = car_data["Fuel_type"].unique()
-    drive = car_data["Drive"].unique()
-    return [car_names, years, distance, fuel_type, drive]
+# def get_all_data():
+#     car_names = sorted(car_data["Car_name"].unique())
+#     years = sorted(car_data["Year"].unique())
+#     distance = sorted(car_data["Distance"].unique())
+#     fuel_type = car_data["Fuel_type"].unique()
+#     drive = car_data["Drive"].unique()
+#     return [car_names, years, distance, fuel_type, drive]
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=8000)

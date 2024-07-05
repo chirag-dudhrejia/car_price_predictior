@@ -2,4 +2,3 @@ gunicorn
 flask~=3.0.3
 pandas~=2.2.1
 scikit-learn
--e .
