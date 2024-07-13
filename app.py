@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request
 import pandas as pd
 import pickle
+from src.pipeline import predict_pipeline as pred_pipe
 
-car_data = pd.read_csv("cars24_cleaned.csv")
-model = pickle.load(open("CarLinearRegressionModel.pkl", "rb"))
+car_data = pd.read_csv("artifacts/ingested_data/data.csv")
+# model = pickle.load(open("CarLinearRegressionModel.pkl", "rb"))
 
 app = Flask(__name__)
 
@@ -34,9 +35,16 @@ def perform_prediction():
     drive = values["drive"]
     kms_driven = values["km_travelled"]
 
-    prediction = model.predict(pd.DataFrame(data=[[car_model, year, kms_driven, fuel, drive]],
-                                            columns=["Car_name", "Year", "Distance", "Fuel_type", "Drive"]))
-    prediction = round(prediction[0])
+    # prediction = model.predict(pd.DataFrame(data=[[car_model, year, kms_driven, fuel, drive]],
+    #                                         columns=["Car_name", "Year", "Distance", "Fuel_type", "Drive"]))
+    # prediction = round(prediction[0])
+
+    data = pred_pipe.CustomData(car_model, year, kms_driven, fuel, drive)
+    framed_data = data.get_data_as_dataframe()
+
+    prediction_obj = pred_pipe.PredictPipeline()
+    prediction = round(prediction_obj.predict(framed_data)[0])
+
     return render_template("prediction_page.html",
                            prediction=prediction,
                            car_model=car_model,
