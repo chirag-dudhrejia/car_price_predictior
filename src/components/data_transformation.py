@@ -38,7 +38,7 @@ class DataTransformation:
                 ]
             )
 
-            whole_data = pd.read_csv("artifacts\ingested_data\data.csv")
+            whole_data = pd.read_csv("artifacts/ingested_data/data.csv")
             ohe = OneHotEncoder()
             ohe.fit(whole_data[["Car_name", "Fuel_type", "Drive"]])
 
