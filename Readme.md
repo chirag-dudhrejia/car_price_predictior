@@ -1,4 +1,4 @@
-# 🚗 Car Price Predictor
+# Car Price Predictor
 
 ## 1️⃣ Description
 
@@ -14,15 +14,15 @@
 - **Bootstrap**: For designing a responsive and user-friendly frontend.
 - **Render**: Platform used for deploying the web application.
 
-## 3️⃣ Design
+## 3️⃣ Demo
 
-The design of the Car Price Predictor consists of the following components:
+**Live view by clicking the badge:**  [![Render](https://img.shields.io/badge/Hosted%20on-Render-blue?style=for-the-badge&logo=render)](https://car-price-predictor-9oji.onrender.com/)
 
-- **Data Collection**: Using Selenium, relevant data is scraped from online car listing.
-- **Data Processing**: The collected data is cleaned and pre-processed using Pandas.
-- **Model Training**: A machine learning model is developed using Scikit-Learn, trained on the processed data to predict car prices.
-- **Web Application**: A Flask-based backend serves the model, while Bootstrap is used for designing an intuitive and responsive frontend where users can input car details and get price estimates.
-- **Deployment**: The complete application is deployed on Render, making it accessible to users via the web.
+
+<div align="center">
+  <img src="https://github.com/chirag-dudhrejia/car_price_predictor/blob/main/static/images/input_page.png" alt="Data Input Page" width="45%"/>
+  <img src="https://github.com/chirag-dudhrejia/car_price_predictor/blob/main/static/images/prediction_page.png" alt="Prediction Page" width="45%"/>
+</div>
 
 ## 4️⃣ Features
 
@@ -34,7 +34,7 @@ The design of the Car Price Predictor consists of the following components:
 
 ### Prerequisites
 
-Ensure you have Python 3.x installed on your system. You'll also need `pip` for installing required Python packages.
+Ensure you have Python 3.11 installed on your system. You'll also need `pip` for installing required Python packages.
 
 ### Steps to Run
 
