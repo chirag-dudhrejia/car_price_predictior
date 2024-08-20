@@ -19,10 +19,8 @@
 **Live view by clicking the badge:**  [![Render](https://img.shields.io/badge/Hosted%20on-Render-blue?style=for-the-badge&logo=render)](https://car-price-predictor-9oji.onrender.com/)
 
 
-<div align="center">
-  <img src="https://github.com/chirag-dudhrejia/car_price_predictor/blob/main/static/images/input_page.png" alt="Data Input Page" width="45%"/>
-  <img src="https://github.com/chirag-dudhrejia/car_price_predictor/blob/main/static/images/prediction_page.png" alt="Prediction Page" width="45%"/>
-</div>
+<img src="https://github.com/chirag-dudhrejia/car_price_predictor/blob/main/static/images/input_page.png" alt="Data Input Page" width="90%"/>
+<img src="https://github.com/chirag-dudhrejia/car_price_predictor/blob/main/static/images/prediction_page.png" alt="Prediction Page" width="90%"/>
 
 ## 4️⃣ Features
 
